@@ -1,16 +1,23 @@
 #include<stdio.h>
 int main(void)
 {
-	float sum = 100.;
-	const float li = .08;
-	int year = 0;
+	float length, width;
 
-	while (sum > 0)
+	printf("Please enter the length, ");
+	printf("and enter q to quit: ");
+	while (scanf_s("%f", &length) == 1)
 	{
-		sum += sum * li-10;
-		year++;
+		printf("The length is %.2f.\n", length);
+		printf("Please enter the width, ");
+		printf("and enter q to quit: ");
+		if (scanf_s("%f", &width) != 1)
+			break;
+		printf("The width is %.2f.\n", width);
+		printf("The area is %.2f.\n", length * width);
+		printf("Please enter the length, ");
+		printf("and enter q to quit: ");
 	}
-	printf("%d", year);
+	printf("Bye!\n");
 
 	return 0;
 }
