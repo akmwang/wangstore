@@ -1,21 +1,16 @@
 #include<stdio.h>
 int main(void)
 {
-	const double chu =9./5.;
-	const double zhua = 32.;
-	const double zkai = 273.16;
-	double she;
-	double hua, kai;
+	float sum = 100.;
+	const float li = .08;
+	int year = 0;
 
-	printf("Please input the she temprature(no number to quit): ");
-	while (scanf_s("%lf", &she) == 1)
+	while (sum > 0)
 	{
-		hua = she * chu + zhua;
-		kai = she + zkai;
-		printf("%.2f in hua is %.2f, in kai is %.2f.\n", she, hua, kai);
-		printf("Please input another she(no number to quit): ");
+		sum += sum * li-10;
+		year++;
 	}
-	printf("Done.");
+	printf("%d", year);
 
 	return 0;
 }
